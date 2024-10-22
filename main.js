@@ -1,23 +1,32 @@
 //Archivo principal
-/*Sistema de Hospital: Diseña una aplicación para gestionar un hospital, donde se
-puedan cargar médicos, pacientes y salas de atención. Además de asignar médicos y
+/*Sistema de Hospital: Dise-a una aplicacion para gestionar un hospital, donde se
+puedan cargar meicos, pacientes y salas de atencion. Ademas de asignar medicos y
 pacientes a las salas, implementa un sistema de citas. Los pacientes deben poder
-solicitar citas con médicos para una fecha y hora específica, y el sistema debe verificar
-la disponibilidad del médico. Permite ver el historial de citas de un paciente y los
-médicos con más consultas.*/
-//const prompt = require('prompt-sync')();
+solicitar citas con medicos para una fecha y hora especifica, y el sistema debe verificar
+la disponibilidad del medico. Permite ver el historial de citas de un paciente y los
+medicos con mas consultas.*/
+const prompt = require('prompt-sync')();
 
 import { doctores } from "./doctores.js";
 import { pacientes } from "./pacientes.js";
 import { salas } from "./salas.js";
 
+function solicitarTurno() {
+    let nombrePaciente = prompt("Ingrese su nombre");
+    let nombreDoctor = prompt('Elija uno de los doctores de nuestra cartilla:\n ' +
+            '* Meredith Grey\n '+
+            '* Derek Shepherd\n' +
+            '* Cristina Yang\n' +
+            '* Alex Karev\n' +
+            '* Mark Sloan\n\n' +
+            'Ingrese el nombre del doctor con el que desea concretar su consulta.');
 
-const eleccionDeSala = doctores[Math.floor(Math.random()* doctores.length)]
-//console.log(eleccionDeSala);
-if (eleccionDeSala.disponibilidad == false) {
-    console.log('El doctor no está disponible');
-} else {
-    console.log(eleccionDeSala);
-    
 }
+
+const doctorEncontrado = doctores.find(nombreDoctor);
+
+
+
+
+//alert(nombrePaciente, nombreDoctor)
 
