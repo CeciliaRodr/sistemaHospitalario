@@ -5,11 +5,44 @@ pacientes a las salas, implementa un sistema de citas. Los pacientes deben poder
 solicitar citas con medicos para una fecha y hora especifica, y el sistema debe verificar
 la disponibilidad del medico. Permite ver el historial de citas de un paciente y los
 medicos con mas consultas.*/
-const prompt = require('prompt-sync')();
-
+import prompt_sync from 'prompt-sync';
 import { doctores } from "./doctores.js";
 import { pacientes } from "./pacientes.js";
 import { salas } from "./salas.js";
+
+const prompt = prompt_sync();
+
+function agregarElemento(elem, arreglo) {
+    arreglo.push(elem);
+    
+}
+
+function menuDoctor() {
+
+    console.log("Ingrese 1 si desea ingresar un médico");
+  
+}
+
+let eleccion = 1;
+while (eleccion !=0) {
+    menuDoctor();
+    eleccion = Number(prompt());
+    if (eleccion === 1) {
+        const doctor = {
+            name: prompt("Ingrese nombre: "),
+            especialidad: prompt('Ingrese especialidad: '),
+            disponibilidad: Boolean(prompt("Ingrese disponibilidad: "))
+        }
+
+        agregarElemento(doctor, doctores)
+        
+    }
+    
+}
+
+
+
+
 
 function solicitarTurno() {
     let nombrePaciente = prompt("Ingrese su nombre");
@@ -24,6 +57,17 @@ function solicitarTurno() {
 }
 
 const doctorEncontrado = doctores.find(nombreDoctor);
+
+/*if (!doctorEncontrado) {
+    alert("Intenta nuevamente")
+} else {
+    if (doctorEncontrado.disponibilidad) {
+        
+    } else {
+        
+    } ()
+}*/
+
 
 
 
