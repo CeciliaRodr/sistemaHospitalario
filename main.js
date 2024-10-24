@@ -13,18 +13,30 @@ import { salas } from "./salas.js";
 
 function solicitarTurno() {
     let nombrePaciente = prompt("Ingrese su nombre");
-    let nombreDoctor = prompt('Elija uno de los doctores de nuestra cartilla:\n ' +
+    let motivoConsulta = prompt("Ingrese motivo de su consulta")
+    let nombreDoctor = prompt('Ingrese el nombre de uno de los doctores de nuestra cartilla:\n ' +
             '* Meredith Grey\n '+
             '* Derek Shepherd\n' +
             '* Cristina Yang\n' +
             '* Alex Karev\n' +
-            '* Mark Sloan\n\n' +
-            'Ingrese el nombre del doctor con el que desea concretar su consulta.');
+            '* Mark Sloan\n' +
+            '');
 
 }
+const nuevoPaciente = {
+    nombre: nombrePaciente,
+    consulta: motivoConsulta
+};
 
-const doctorEncontrado = doctores.find(nombreDoctor);
+pacientes.push(nuevoPaciente)
 
+const doctorEncontrado = doctores.find(nombreDoctor); 
+
+//si se necesita el prompt, y sino como solicitaria el turno
+//por qué no lo puedo ver en el navegador
+//si es importante la mayuscula
+//orden 
+//disponibilidad del doctor está indicada en el arreglo, en el objeto
 
 
 
