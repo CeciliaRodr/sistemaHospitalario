@@ -1,4 +1,4 @@
-const doctores = [
+export let doctores = [
    {
         name: "Meredith Grey",
         especialidad: "Medicina general",
@@ -34,4 +34,3 @@ const doctores = [
 }, 
 
 ]
-export {doctores}
