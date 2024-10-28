@@ -26,10 +26,12 @@ function solicitarTurno() {
         }
     
         const doctorSeleccionado = doctores.find(doctor => doctor === nombreDoctor);
- (!doctorSeleccionado) {
+ if (!doctorSeleccionado) {
     console.log('El nombre ingresado no es correcto, ingrese nuevamente');
-    }       
+    } 
 
 
 //console.log(solicitarTurno('Luis Gomez', 'Meredith Grey', 'tumor'))
 //console.log()
+
+solicitarTurno()

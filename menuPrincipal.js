@@ -1,6 +1,6 @@
 //Archivo principal
 //Sistema de Hospital: Dise-a una aplicacion para gestionar un hospital, donde se puedan:
-//cargar medicos, pacientes y salas de atencion. 
+//cargar medicos, pacientes y (salas de atencion). 
 //Ademas de asignar medicos y pacientes a las salas, implementa un sistema de citas.
 // Los pacientes deben poder solicitar citas con medicos para una fecha y hora especifica, y el sistema debe verificar la disponibilidad del medico. 
 //Permite ver el historial de citas de un paciente y los medicos con mas consultas.*/
