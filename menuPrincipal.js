@@ -40,21 +40,18 @@ while (eleccion !=0) {
 
     } else { 
         const paciente = {
-            name: prompt("Ingresa el nombre del paciente: "),
-            motivo: prompt("Ingrese el motivo de la asistencia del paciente: "),
-            historialMedico: [],
+            nombre: prompt("Ingresa el nombre del paciente: "),
+            historialMedico: prompt("Ingrese el motivo de la asistencia del paciente: "),
+            
         }
     
     agregarElemento (paciente,pacientes)
 console.table(pacientes)
 }
 }
-pacientes.forEach(paciente => { motivo.push(paciente)});
+//pacientes.forEach(paciente => { motivo.push(paciente)});
     
-for (let index = 0; index < pacientes.length; index++) {
-    const element = historialMedico[index];
-    
-}
+
 
 
 

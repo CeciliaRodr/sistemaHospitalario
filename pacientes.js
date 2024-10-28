@@ -1,42 +1,33 @@
 const pacientes = [
     {
-        name:"Lisa Simpson",
+        nombre:"Lisa Simpson",
         
-        historialMedico: ["Migrañas", "Vómitos", "Esguince"]
+        historialMedico: ["Migrañas", " Vómitos", " Esguince"]
     },
 
     {
-        name:"Olga perez",
+        nombre:"Olga perez",
         
-        historialMedico: ["Migrañas", "fiebre", "mareos"]
+        historialMedico: ["Migrañas ", " Fiebre", " Mareos"]
     },
 
     {
-        name:"Juan sosa",
-        historialMedico: ["bronquitis", "Vómitos", "gastritis"]
+        nombre:"Juan Sosa",
+        historialMedico: ["Bronquitis", " Vómitos", " Gastritis"]
     },
 
     {
-        name:"Milena garcia",
-        historialMedico: ["dolor de estomago", "agitacion", "Esguince"]
+        nombre:"Milena Garcia",
+        historialMedico: ["Dolor de estomago ", " Agitacion", " Esguince"]
     },
 
     {
-        name:"Magui Simpson",
-        historialMedico: ["cefalea", "Vómitos", "dolor de oidos "]
+        nombre:"Maguie Simpson",
+        historialMedico: ["Cefalea ", " Vómitos ", " Dolor de oidos "]
     },
     
 ]
 
-//console.log(pacientes[0].historialMedico)
-//iterar para mostrar todo
-for (let index = 0; index < pacientes.length; index++) {
-    const element = array[index];   
-}
-pacientes.forEach(paciente => {
-    console.log(
-        "Paciente: " + paciente.name + ", Historial Médico: " + paciente.historialMedico //.join(', ')
-    ); 
-});
+
 
 export {pacientes}

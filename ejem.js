@@ -6,16 +6,8 @@
     console.log('El doctor no está disponible');
 } else {
     console.log(eleccionDeSala)
+//SUBE DANI A SOLICITAR TURNO
 
-function solicitarTurno() {
-    // Solicitar al usuario que seleccione un médico
-
-    const doctorEncontrado = doctores.find(doctor => doctor.nombre.toLowerCase() === doctorSeleccionado.toLowerCase());
-    
-    if (!doctorEncontrado) {
-        alert("El médico ingresado no está en nuestra cartilla. Por favor, inténtelo de nuevo.");
-        return; // Termina la función si el médico no está en la lista
-    }
 
 
     // Solicitar fecha y hora de la cita
