@@ -1,43 +1,29 @@
 const salas = [
 
 {
-        sala: "1",
+        id: "1",
         disponibilidad: true
     },
 
     {
-        sala: "2",
+        id: "2",
         disponibilidad: true
     },
 
     {
-        sala: "3",
+        id: "3",
         disponibilidad: false
     },
 
     {
-        sala: "4",
+        id: "4",
         disponibilidad: true
     },
 
     {
-        sala: "5",
+        id: "5",
         disponibilidad: false
     }
 ]
 
 export {salas}
-
-
-//console.log(salas[0].disponibilidad);
-
-/*for (let index = 0; index < salas.length; index++) {
-    const element = salas[index];
-    if (element.disponibilidad == true) {
-        console.log(element);
-        
-    }
-    
-}
-
-console.table(salas)*/

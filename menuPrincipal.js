@@ -1,62 +1,46 @@
-//Archivo principal
-//Sistema de Hospital: Dise-a una aplicacion para gestionar un hospital, donde se puedan:
-//cargar medicos, pacientes y (salas de atencion). 
-//Ademas de asignar medicos y pacientes a las salas, implementa un sistema de citas.
-// Los pacientes deben poder solicitar citas con medicos para una fecha y hora especifica, y el sistema debe verificar la disponibilidad del medico. 
-//Permite ver el historial de citas de un paciente y los medicos con mas consultas.*/
 import prompt_sync from 'prompt-sync';
+const prompt = prompt_sync();
 import { doctores } from "./doctores.js";
 import { pacientes } from "./pacientes.js";
 import { salas } from "./salas.js";
+import chalk from 'chalk';
+import { eliminarPacientePorId } from "./pacientes.js";
+import { eliminarDoctorPorId } from './doctores.js';
+import { solicitarTurno } from './solicitarTurno.js';
 
-const prompt = prompt_sync();
-
-
-//ingresamos doctores a la cartilla
 function agregarElemento(elem, arreglo) {
-    arreglo.push(elem);
-    
+    arreglo.push(elem);   
 }
 
 function menuPrincipal() {
-
+    console.log(chalk.blueBright('¡Bienvenidos al Sistema Hospitalario!'));
     console.log("*Ingrese 1 si usted es parte del personal y desea ingresar un médico a la cartilla. \n" +
-        "*Ingrese 2 si usted desea ingresar un paciente al sistema. \n")
+        "*Ingrese 2 si usted desea eliminar un médico del sistema. \n" +
+        "*Ingrese 3 si usted desea ingresar un paciente al sistema. \n" +
+        "*Ingrese 4 si usted desea eliminar un paciente del sistema \n");
   }
-let eleccion = 1;
-while (eleccion !=0) {
-    menuPrincipal();
-    eleccion = Number(prompt());
-    if (eleccion === 1) {
-        const doctor = {
-            name: prompt("Ingrese nombre: "),
-            especialidad: prompt('Ingrese especialidad: '),
-            disponibilidad: Boolean(prompt("Ingrese disponibilidad: "))
-        }
 
-        agregarElemento(doctor, doctores)
+         agregarElemento (paciente,pacientes)
+        console.table(pacientes)
 
-        console.table(doctores);
-
-    } else { 
-        const paciente = {
-            nombre: prompt("Ingresa el nombre del paciente: "),
-            historialMedico: prompt("Ingrese el motivo de la asistencia del paciente: "),
-            
-        }
+        const eleccionID = Number(prompt('Ingrese el ID del paciente que desea eliminar: '))
+        eliminarPacientePorId(eleccionID, pacientes);  
+        console.table(pacientesActualizados)    
+        
     
-    agregarElemento (paciente,pacientes)
-console.table(pacientes)
-}
-}
-//pacientes.forEach(paciente => { motivo.push(paciente)});
+
+const eleccionID = Number(prompt('Ingrese el ID del paciente que desea eliminar: '))
+
+console.log(eliminarPacientePorId(eleccionID,pacientes));
+
+
     
 
 
 
 
 
-/*const doctorEncontrado = doctores.find(nombreDoctor); 
+const doctorEncontrado = doctores.find(nombreDoctor); 
 if (!doctorEncontrado) {
     alert("Intenta nuevamente")
 } else {
@@ -66,30 +50,9 @@ if (!doctorEncontrado) {
         let fechaCita = prompt("Ingrese la fecha de la cita (formato: YYYY-MM-DD):");
     let horaCita = prompt("Ingrese la hora de la cita (formato: HH:MM):");
     }
-}/*
-
-    }
 }
 
+    
 
 
-
-
-
-alert('El archivo main.js se ha cargado correctamente');
-console.log('Archivo main.js cargado');*/
-
-
-//alert(nombrePaciente, nombreDoctor);
-
-//el usuario saca turno
-/*function solicitarTurno() {
-    let nombrePaciente = prompt("Ingrese su nombre");
-    let motivoConsulta = prompt("Ingrese motivo de su consulta")
-    let nombreDoctor = prompt('Ingrese el nombre de uno de los doctores de nuestra cartilla:\n ' +
-            '* Meredith Grey\n '+
-            '* Derek Shepherd\n' +
-            '* Cristina Yang\n' +
-            '* Alex Karev\n' +
-            '* Mark Sloan\n' +
-            '');*/
+//pacientes.forEach(paciente => { motivo.push(paciente)});            //pacientes.forEach(paciente => { motivo.push(paciente)});
