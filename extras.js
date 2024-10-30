@@ -1,6 +1,6 @@
 import prompt_sync from 'prompt-sync';
 const prompt = prompt_sync();
-import { doctores } from "./doctores.js";
+import { doctores, eliminarDoctorPorId, doctorConMasCitas, modificarDoctorPorId } from "./doctores.js";
 import { pacientes } from "./pacientes.js";
 import { salas } from "./salas.js";
 import chalk from 'chalk';
@@ -35,18 +35,8 @@ function agregarDoctor() {
     console.log("El dato ha sido agregado correctamente.");
 }
 
-function eliminarDoctorPorId() {
-    const id = prompt("Ingrese el ID del doctor a eliminar: ");
-    const nuevoArrayDoctores = doctores.filter(doc => doc.id !== id);
-    if (nuevoArrayDoctores.length === doctores.length) {
-        console.log("El ID ingresado no existe.");
-    } else {
-        console.log("El dato ha sido eliminado.");
-        doctores.length = 0; // Limpiamos el array original
-        doctores.push(...nuevoArrayDoctores); // Lo llenamos con el nuevo array
-        console.table(doctores);
-    }
-}
+
+
 
 function verificarDisponibilidadDoctor() {
     const nombreDoctor = prompt("Ingrese el nombre del doctor para verificar su disponibilidad: ");
@@ -112,6 +102,7 @@ function menu() {
     console.log("5. Eliminar un paciente");
     console.log("6. Mostrar pacientes");
     console.log("7. Solicitar un turno");
+    console.log("8. Modificar un médico");
     console.log("0. Salir");
     const opcion = Number(prompt("Seleccione una opción: "));
     return opcion;
@@ -141,6 +132,9 @@ do {
             break;
         case 7:
             solicitarTurno();
+            break;
+        case 8:
+            modificarDoctorPorId();
             break;
         case 0:
             console.log("Adiós.");
