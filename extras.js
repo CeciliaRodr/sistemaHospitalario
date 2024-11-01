@@ -4,13 +4,12 @@ import { doctores, eliminarDoctorPorId, doctorConMasCitas, modificarDoctorPorId 
 import { pacientes } from "./pacientes.js";
 import { salas } from "./salas.js";
 import chalk from 'chalk';
+import { solicitarTurno } from "./solicitarTurno.js";
 
 
 
 //PROBLEMAS CON LAS IMPORTACIONES
 
-
-// Datos de ejemplo
 
 function eleccionDeSala(salas) {
     let sala;
@@ -27,12 +26,14 @@ function eleccionDeSala(salas) {
 
 function agregarDoctor() {
     const name = prompt("Ingrese el nombre del doctor: ");
-    const id = prompt('Ingrese el ID del doctor: ');
+    const id = Number(prompt('Ingrese el ID del doctor: '));
     const especialidad = prompt("Ingrese la especialidad: ");
     const cantDeCitas = Number(prompt("Ingrese la cantidad de citas: "));
     const disponibilidad = prompt("Está disponible? (true/false): ") === 'true';
     doctores.push({ name, id, especialidad, cantDeCitas, disponibilidad });
     console.log("El dato ha sido agregado correctamente.");
+    console.table(doctores);
+
 }
 
 
@@ -82,16 +83,18 @@ function mostrarPacientes() {
     console.table(pacientes);
 }
 
-function solicitarTurno() {
+/*function solicitarTurno() {
     const salaElegida = eleccionDeSala(salas);
     const nombrePaciente = prompt("Ingrese su nombre: ");
     const motivoConsulta = prompt("Ingrese motivo de su consulta: ");
     const fechaCita = prompt("Ingrese la fecha respetando el formato DD/MM: ");
     const horaCita = prompt("Ingrese la hora respetando el formato HH:MM: ");
+    console.log('Listado de los doctores disponibles');
+    console.log(doctores)
     const nombreDoctor = prompt('Ingrese el nombre de uno de los doctores: ');
 
     console.log(`${nombrePaciente}, tu turno con el doctor ${nombreDoctor} es el día: ${fechaCita} a las ${horaCita} en la sala: ${salaElegida.id}`);
-}
+}*/
 
 function menu() {
     console.log("\n--- Sistema Hospitalario ---");

@@ -32,22 +32,19 @@ const pacientes = [
         historialMedico: ["14/08 cita por Cefalea", " 18/11 cita por Vómitos", " 09/06 cita por Dolor de oidos "]
     },
     
+//console.table(pacientes)
 ]
-
-//console.table(pacientes);
 
 export function eliminarPacientePorId(id, pacientes) {
     const existePaciente = pacientes.some(paciente => paciente.id === id);
-
    if (!existePaciente) {
        console.log('El ID ' + id + ' ingresado no corresponde a un paciente');
    } else {
        const pacientesActualizados = pacientes.filter(paciente => paciente.id !== id);
        console.table(pacientesActualizados);
    }
-}
 const eleccionID = Number(prompt('Ingrese el ID del paciente que desea eliminar: '))
 eliminarPacientePorId(eleccionID, pacientes);  
-
+}
 
 export {pacientes}

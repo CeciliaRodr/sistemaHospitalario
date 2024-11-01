@@ -25,13 +25,19 @@ eleccionDeSala(salas);
     let motivoConsulta = prompt("Ingrese motivo de su consulta: ")
     let fechaCita = prompt("Ingrese la fecha respetando el formato DD/MM: ");
     let horaCita = prompt("Ingrese la hora respetando  el formato HH:MM: ");
-    let nombreDoctor = prompt('Ingrese el nombre de uno de los doctores de nuestra cartilla:\n ' +
+    console.log("Cartilla de doctores disponibles");
+    const cartillaDeDoctores = doctores.map(doctor => doctor.name);
+    console.log(cartillaDeDoctores); 
+    let nombreDoctor = prompt('Ingrese el nombre del doctor con el que se quiere atender: ');
+
+
+    /*let nombreDoctor = prompt('Ingrese el nombre de uno de los doctores de nuestra cartilla:\n ' +
             '* Meredith Grey\n '+
             '* Derek Shepherd\n' +
             '* Cristina Yang\n' +
             '* Alex Karev\n' +
             '* Mark Sloan\n' +
-            '');
+            '');*/
 
      
             function verificarDisponibilidad(nombreDoctor) {
@@ -50,10 +56,10 @@ eleccionDeSala(salas);
                     console.log('Lo sentimos, el doctor ' + nombreDoctor + ' no está disponible.');
                 }
             }
-    console.log(nombrePaciente + ' tu turno con el doctor ' + nombreDoctor + ' es el día: ' + fechaCita + ' a las ' + horaCita + ' en la sala: ' + salaElegida.id)     
+    console.log(nombrePaciente + ' tu turno con el doctor ' + nombreDoctor + ' es el día: ' + fechaCita + ' a las ' + horaCita)     
 
      }
-    const salaElegida = eleccionDeSala(salas);           
+    /*const salaElegida = eleccionDeSala(salas);           
     const turno = {
         nombrePaciente,
         nombreDoctor,
@@ -62,10 +68,10 @@ eleccionDeSala(salas);
         sala: salas
         };
         turnos.push(turno) 
-     solicitarTurno(salas)
+     solicitarTurno(salas)*/
             
     
 
 
-console.log(solicitarTurno(salas))
+//console.log(solicitarTurno(salas))
 

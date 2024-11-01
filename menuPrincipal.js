@@ -29,9 +29,6 @@ function menuPrincipal() {
         
     
 
-const eleccionID = Number(prompt('Ingrese el ID del paciente que desea eliminar: '))
-
-console.log(eliminarPacientePorId(eleccionID,pacientes));
 
 
     
@@ -55,4 +52,3 @@ if (!doctorEncontrado) {
     
 
 
-//pacientes.forEach(paciente => { motivo.push(paciente)});            //pacientes.forEach(paciente => { motivo.push(paciente)});
