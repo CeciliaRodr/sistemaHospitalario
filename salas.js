@@ -26,4 +26,17 @@ const salas = [
     }
 ]
 
+export function eleccionDeSala(salas) {
+    let sala;
+    do {
+        sala = salas[Math.floor(Math.random() * salas.length)];
+        if (!sala.disponibilidad) {
+            console.log("La sala " + sala.id + " no está disponible. Asignando otra...");
+        }
+    } while (!sala.disponibilidad);
+
+    console.log("Sala asignada:", sala.id);
+    return sala;
+}
+        
 export {salas}

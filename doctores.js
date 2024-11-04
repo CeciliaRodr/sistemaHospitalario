@@ -50,7 +50,6 @@ export function doctorConMasCitas(doctores) {
 
     console.log(doctorConMasCitas.name, "tuvo un total de", doctorConMasCitas.cantDeCitas, "citas.");
 }
-//console.log(doctorConMasCitas(doctores)); //solo está para que funcione.
 
 export function eliminarDoctorPorId(id, doctores) {
     const existeDoctor = doctores.some(doctor => doctor.id === id);

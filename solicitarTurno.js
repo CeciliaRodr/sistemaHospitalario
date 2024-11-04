@@ -1,9 +1,9 @@
 import prompt_sync from 'prompt-sync';
 const prompt = prompt_sync();
 import { doctores } from "./doctores.js";
-import { salas } from "./salas.js";
+import { eleccionDeSala } from "./salas.js";
 
-const turnos = [];
+//const turnos = [];
 
 function eleccionDeSala(salas) {
     let sala;
@@ -73,5 +73,5 @@ eleccionDeSala(salas);
     
 
 
-//console.log(solicitarTurno(salas))
+
 

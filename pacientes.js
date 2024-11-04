@@ -47,4 +47,8 @@ const eleccionID = Number(prompt('Ingrese el ID del paciente que desea eliminar:
 eliminarPacientePorId(eleccionID, pacientes);  
 }
 
+export function mostrarPacientes() {
+    console.table(pacientes);
+}
+
 export {pacientes}
