@@ -62,7 +62,7 @@ export function eliminarDoctorPorId(id, doctores) {
    }
 }
 
-//ACTIVIDAD EXTRA
+
 export function modificarDoctorPorId() {
     const id = Number(prompt("Ingrese el ID del doctor a editar: "));
     let existeDoctor = doctores.find(doctor => doctor.id === id);

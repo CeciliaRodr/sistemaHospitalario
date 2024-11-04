@@ -9,7 +9,7 @@ import { solicitarTurno } from "./solicitarTurno.js";
 //PROBLEMAS CON LAS IMPORTACIONES
 
 
-/*function eleccionDeSala(salas) {
+function eleccionDeSala(salas) {
     let sala;
     do {
         sala = salas[Math.floor(Math.random() * salas.length)];
@@ -19,7 +19,7 @@ import { solicitarTurno } from "./solicitarTurno.js";
     } while (!sala.disponibilidad);
 
     console.log("Sala asignada:", sala.id);
-    return sala;}*/
+    return sala;}
 
 function agregarDoctor() {
     const name = prompt("Ingrese el nombre del doctor: ");
@@ -73,9 +73,9 @@ function mostrarDoctores() {
     console.table(doctores);
 }
 
-/*function mostrarPacientes() {
+function mostrarPacientes() {
     console.table(pacientes);
-}*/
+}
 
 
 function menu() {

@@ -8,7 +8,7 @@ const prompt = prompt_sync();
 
 
 
-/*export function eliminarPacientePorId(id, pacientes) {
+export function eliminarPacientePorId(id, pacientes) {
     const eleccion = Number(prompt('Ingrese el ID del paciente a eliminar: '));
     const existePaciente = pacientes.some(paciente => paciente.id === id);
 
@@ -20,19 +20,17 @@ const prompt = prompt_sync();
     }
 
 eliminarPacientePorId(eleccion, pacientes);
-}*/
-
-
-
-/*for (let index = 0; index < pacientes.length; index++) {
-    const pacienteActual = pacientes[index];   
 }
 
-//console.table(pacientesActualizados)
 
-/*pacientes.forEach(pacientes => {
+for (let index = 0; index < pacientes.length; index++) {
+    const pacienteActual = pacientes[index];   
+    console.table(pacientesActualizados)
+
+}
+
+pacientes.forEach(pacientes => {
     console.table(
         "Paciente: " + pacientes.nombre + ", Historial Médico: " + pacientes.historialMedico
     ); 
-});*/ //muestra todos
-//(pacientes[0].historialMedico)
+})

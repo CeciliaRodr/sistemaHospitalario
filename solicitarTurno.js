@@ -31,35 +31,26 @@ eleccionDeSala(salas);
     let nombreDoctor = prompt('Ingrese el nombre del doctor con el que se quiere atender: ');
 
 
-    /*let nombreDoctor = prompt('Ingrese el nombre de uno de los doctores de nuestra cartilla:\n ' +
-            '* Meredith Grey\n '+
-            '* Derek Shepherd\n' +
-            '* Cristina Yang\n' +
-            '* Alex Karev\n' +
-            '* Mark Sloan\n' +
-            '');*/
-
+  
      
-            function verificarDisponibilidad(nombreDoctor) {
-                const doctor = doctores.find(doc => doc.name === nombreDoctor);
+ function verificarDisponibilidad(nombreDoctor) {
+    const doctor = doctores.find(doc => doc.name === nombreDoctor);
             
-                // Verificamos si el doctor fue encontrado
-                if (!doctor) {
-                    console.log('El doctor no fue encontrado.');
-                    return;
-                }
+    if (!doctor) {
+        console.log('El doctor no fue encontrado.');
+        return;
+        }
             
-                // Verificamos la disponibilidad
-                if (doctor.disponibilidad) {
-                    console.log('El doctor ' + nombreDoctor + ' se encuentra disponible.');
-                } else {
-                    console.log('Lo sentimos, el doctor ' + nombreDoctor + ' no está disponible.');
-                }
-            }
+    if (doctor.disponibilidad) {
+        console.log('El doctor ' + nombreDoctor + ' se encuentra disponible.');
+        } else {
+            console.log('Lo sentimos, el doctor ' + nombreDoctor + ' no está disponible.');
+        }}
+
     console.log(nombrePaciente + ' tu turno con el doctor ' + nombreDoctor + ' es el día: ' + fechaCita + ' a las ' + horaCita)     
 
      }
-    /*const salaElegida = eleccionDeSala(salas);           
+    const salaElegida = eleccionDeSala(salas);           
     const turno = {
         nombrePaciente,
         nombreDoctor,
@@ -67,8 +58,8 @@ eleccionDeSala(salas);
         horaCita,
         sala: salas
         };
-        turnos.push(turno) 
-     solicitarTurno(salas)*/
+        turno.push(turno) 
+     solicitarTurno(salas)
             
     
 
