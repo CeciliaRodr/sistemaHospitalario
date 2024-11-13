@@ -2,12 +2,6 @@ import { pacientes } from "./pacientes.js";
 import prompt_sync from 'prompt-sync';
 const prompt = prompt_sync();
 
-
-
-
-
-
-
 export function eliminarPacientePorId(id, pacientes) {
     const eleccion = Number(prompt('Ingrese el ID del paciente a eliminar: '));
     const existePaciente = pacientes.some(paciente => paciente.id === id);

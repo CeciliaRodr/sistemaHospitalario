@@ -1,4 +1,5 @@
 import prompt_sync from 'prompt-sync';
+import { turnos } from './solicitarTurno.js';
 const prompt = prompt_sync();
 
 export let doctores = [
@@ -79,6 +80,21 @@ export function modificarDoctorPorId() {
    }
 }
 
+export function verificarDisponibilidadDoctor() {
+    const cartillaDeDoctores = doctores.map(doctor => doctor.name);
+    console.log(cartillaDeDoctores)
+    const nombreDoctor = prompt("Ingrese el nombre del doctor para verificar su disponibilidad: ");
+    const doctor = doctores.find(doc => doc.name === nombreDoctor);
+    if (doctor) {
+        if (doctor.disponibilidad) {
+            console.log("El doctor está disponible.");
+        } else {
+            console.log("Lo sentimos, el doctor no está disponible.");
+        }
+    } else {
+        console.log("El doctor no fue encontrado.");
+    }
+} 
     
 
 
