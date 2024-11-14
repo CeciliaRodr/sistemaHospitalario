@@ -68,20 +68,32 @@ export function solicitarTurno(salas) {
 const salaElegida = eleccionDeSala(salas);
 
 
-
 export function cancelarCitaPorId(turnos) {
     console.table(turnos);
     const id = Number(prompt("Ingrese el id de su turno: "));
-    const existeTurno = turnos.some(turno => turno.idTurno === id);
-   if (!existeTurno) {
-       console.log('El ID ' + id + ' ingresado no corresponde a un turno');
+    const index = turnos.findIndex(turno => turno.idTurno === id);
 
-   } else {
-       const turnosActualizados = turnos.filter(turno => turno.idTurno !== id);
-       turnos = turnosActualizados;
-       console.table(turnos);
-   }
-
+    if (index === -1) {
+        console.log('El ID ' + id + ' ingresado no existe');
+    } else {
+        turnos.splice(index, 1);
+        console.log('Cancelaste el turno.');
+        console.table(turnos);
+    }
 }
 
 
+/*export function cancelarCitaPorId(turnos) {
+    console.table(turno)
+    const id = Number(prompt("Ingrese el id de su turno: "));
+    const index = turnos.some(turno => turno.idTurno === id);
+   if (!existeTut
+       console.log('El ID ' + id + ' ingresado no corresponde a un turno');
+
+   } else {
+       let index = turnos.filter(turno => turno.idTurno === id);
+    if(index !== -1) {
+        turnos.splice(index, 1);
+        console.table(turnos);
+        }
+}}*/
